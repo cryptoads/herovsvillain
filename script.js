@@ -1,30 +1,34 @@
-var heroName = prompt("What is the Hero's Name?" );
-
-var villainName = prompt("What is the Villain's name?");
-
-var me = new Hero();
-me.name = heroName;
-me.render();
+var heroName = prompt('Give your hero a name!')
+var villainName = prompt('Give your villain a name!');
 
 
-var you = new Villain();
-you.name = villainName;
-you.render();
+var hero = new Hero();
+hero.name = heroName;
+hero.render();
 
-var hammer = new Weapon('hammer', Math.floor(Math.random()*(9)+10));
-var shiv = new Weapon('shiv', Math.floor(Math.random()*(9)+10));
+var villain = new Villain();
+villain.name = villainName;
+villain.render();
 
-me.equipWeapon(hammer);
-you.equipWeapon(shiv);
+function startGame(){
+  hero.health = 100;
+  villain.health = 100;
+  var hammer = new Weapon('hammer');
+  hero.equipWeapon(hammer);
+  var shiv = new Weapon('shiv');
+  villain.equipWeapon(shiv);
+  villain.render();
+  hero.render();
+}
 
+startGame();
 
-
-document.getElementById('heroButton').addEventListener('click', function(){
-    me.attack(you);
-    you.render();
-})
-
-document.getElementById('villainButton').addEventListener('click', function(){
-    you.attack(me);
-    me.render();
-})
+var healthCheck = function(){
+  if (hero.health <= 0){
+    alert('Villain has won!');
+    startGame();
+  }else if (villain.health <= 0){
+    alert('Hero has won!');
+    startGame();
+  }
+};
