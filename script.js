@@ -15,7 +15,6 @@ var hammer = new Weapon('hammer', 10);
 var shiv = new Weapon('shiv', 5);
 console.log(hammer)
 
-me.equipWeapon = hammer;
-you.equipWeapon = shiv;
+me.equipWeapon(hammer);
+you.equipWeapon(shiv);
 
-console.log(me.weapon)
