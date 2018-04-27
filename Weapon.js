@@ -1,6 +1,6 @@
 class Weapon{
-    constructor(name, damage){
+    constructor(name){
         this.name = name;
-        this.damage = damage;
+        this.damage = (Math.floor(Math.random()*9+10));
     }
 }
