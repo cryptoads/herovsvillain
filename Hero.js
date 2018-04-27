@@ -11,7 +11,7 @@ class Hero extends Person {
             hero.attack(villain);
             villain.render();
             var imgs = document.getElementsByClassName('villainImg');
-            imgs[0].classList.add('apply-shake')
+            imgs[0].classList.add('apply-shake');
             healthCheck();
         })
     }
