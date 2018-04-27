@@ -4,11 +4,9 @@ var villainName = prompt('Give your villain a name!');
 
 var hero = new Hero();
 hero.name = heroName;
-hero.render();
 
 var villain = new Villain();
 villain.name = villainName;
-villain.render();
 
 function startGame(){
   hero.health = 100;
