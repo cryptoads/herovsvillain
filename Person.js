@@ -11,6 +11,7 @@ class Person {
 
     attack(otherPerson){
         otherPerson.health -= this.weapon.damage;
+        otherPerson.render();
     }
 
 }
