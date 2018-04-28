@@ -1,7 +1,5 @@
 class Villain extends Person{
-    constructor(){
-     super();
-    }
+
         render(){
         let img = "img/Dennis.gif";
         let villainDiv = document.getElementsByClassName('villain');

@@ -1,7 +1,4 @@
 class Hero extends Person {
-    constructor(){
-        super();
-    }
 
     render(){
         let img = "img/Dino.gif";
